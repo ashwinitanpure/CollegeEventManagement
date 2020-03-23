@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>science exibition</title>
+ <script language="javascript" type="text/javascript">
+    banners= new Array( 'gpp2.jpg','gpp3.jpg','gpp4.jpg','gpp5.jpg','gpp6.jpg','gpp7.jpg','gpp8.jpg','gpp9.jpg','gpp10.jpg','gpp16.jpg','gpp15.jpg','gpp14.jpg','gpp13.jpg','gpp12.jpg','gpp11.jpg' );
+	currentBanner =0;
+function showBanner()
+	{
+	  if (document.images)
+	  {
+	    currentBanner++;
+                        if(currentBanner ==banners.length )
+		{
+		  currentBanner=0;
+		}
+	  document.ChangeBanner.src= banners[currentBanner]
+                  setTimeout("showBanner()",3000);
+	  }
+               }
+ 
+</head>
+<body>
+ <img src="gpp2.jpg" height="200" width="250" name="ChangeBanner" />
+   <a onmouseover="showBanner()"  onmouseout="document.ChangeBanner.src='gpp.jpg'"/>
+  <br><h2><b><u>   Science Day Exibition</u></h2></b></a>
+</body>
+</html>

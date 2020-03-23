@@ -1,0 +1,133 @@
+<!doctypehtml>
+<html>
+<head>
+<style>
+body{
+margin: 5px;
+padding: 0;
+background-color: black; 
+}
+#nav{
+margin: 0;
+padding: 0;
+background-color: lightblue;
+height: 35px;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+ul li{
+display: inline;
+padding: 10px;
+vertical-align: middle;
+}
+ul li a{
+text-decoration: none;
+padding: 8px 8px 8px 8px;
+vertical-align: middle;
+color: purple;
+}
+ul li:hover{
+background-color: rgb(80,170,200);
+border: 1px solid lightblue;
+border-radius: 10px;
+}
+#div1 a{
+font-size: 45px;
+font-family: cooper;
+color:red;
+text-decoration: none;
+}
+#div1 a:hover{
+text-shadow: 3px 3px 7px pink;
+font-size: 48px;
+}
+#img1{
+ display: block;
+ margin:auto;
+ margin-right:auto; 
+padding-top: 50px;
+ }
+#socio{
+ padding: 5px; 
+}
+#socio img:hover{
+ border: solid 5px white; 
+}
+#div4, #div5{
+position:absolute;
+left: 400px;
+top: 300px;
+color: rgb(85,255,238);
+text-shadow: 5px 5px 5px purple;
+font-family: cooper;
+font-size: 30px;
+}
+#p1{
+font-size: 50px;
+}
+#div5{
+position: absolute;
+top: 200px;
+left: 200px;
+font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+mybanner = new Array("robot.jpg","art1.jpg","mygpp.jpg","science.jpg");
+index = 0;
+function func()
+{
+ if(document.images)
+ {
+  index++;
+  if(index == mybanner.length)
+  {
+   index = 0;
+  }
+  document.myimage.src = mybanner[index];
+  setTimeout("func()",3000);
+ }
+}
+</script>
+</head>
+<body onload="func()">
+<div id="nav">
+<ul>
+<li><a  href="" onclick="window.open('sponsors.html','win1')">Sponsors </li>
+<li><a href="" onclick="window.open('exibition1.html','win2')">Exhibitions</a></li>
+<li><a href=""onclick="window.open('workshop.html','win3')">Workshops</a></li>
+<li><a href="" onclick="window.open('about_us.html','win4')">About us</a></li>
+</ul>
+</div>
+<div id="div1">
+<img src="point.gif" height="50" width="50" style="float:left;">
+<a href="" onclick="window.open('toevents.html','mywin')">Events</a>
+</div>
+<div id="div2">
+<img src="robot.jpg" id="img1" name="myimage" height="450" width="800" >
+</div >
+<br>
+<br>
+<div id="div3" align="right" style="margin-top:5px;">
+<a id="socio" href="http://www.instagram.com" ><img src="instagram.jpg" height="50" width="50" /></a>
+<a id="socio"  href="http://www.facebook.com" ><img src="facebook.jpg" height="50" width="50" /></a>
+<a id="socio"  href="http://www.twitter.com" ><img src="twitter.jpg" height="50" width="50" /></a>
+</div>
+<div id="div4">
+<p id="p1" align="center">Technocrity</p>
+<p align="center">powered Times of India<br>copowered by Mercedes</p>
+</div>
+<div id="div5">
+Imbibing the spirit of techo-culture<br>
+Igniting the flames of technacy<br>
+Immersing into grandeur of technocrity
+</div>
+</body>
+</html>

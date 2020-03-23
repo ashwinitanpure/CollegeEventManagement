@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>gpp exibition</title>
+  <script language="javascript" type="text/javascript">
+    banners= new Array( 'elec2.jpg','elec3.jpg','elec4.jpg','elec5.jpg','elec6.jpg','elec7.jpg' );
+	currentBanner =0;
+	function showBanner()
+	{
+	  if (document.images)
+	  {
+	    currentBanner++;
+		if( currentBanner == banners.length)
+		{
+		  currentBanner=0;
+		}
+	  document.ChangeBanner.src= banners[currentBanner];
+	  setTimeout("showBanner()",1500);
+	  }
+	}
+  </script>
+  </head>
+  <body bgcolor="yellow">
+  <img src="elec1.jpg" height="200" width="250" name="ChangeBanner" /><br>
+ <a onmouseover="showBanner()" onmouseout="document.ChangeBanner.src='elec1.jpg'">
+<h2><b><u>Electrical Engineering</u></b></h2></a>
+  </body>
+</html>

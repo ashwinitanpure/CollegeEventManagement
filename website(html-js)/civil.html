@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>gpp exibition</title>
+  <script language="javascript" type="text/javascript">
+    banners= new Array( 'CL2.jpg','CL3.jpg','CL4.jpg','CL5.jpg','CL6.jpg','CL7.jpg' );
+	currentBanner =0;
+	function showBanner()
+	{
+	  if (document.images)
+	  {
+	    currentBanner++;
+		if( currentBanner == banners.length)
+		{
+		  currentBanner=0;
+		}
+	  document.ChangeBanner.src= banners[currentBanner];
+	  setTimeout("showBanner()",1500);
+	  }
+	}
+  </script>
+  </head>
+  <body bgcolor="yellow">
+  <img src="CL1.jpg" height="200" width="250" name="ChangeBanner" /><br>
+ <a onmouseover="showBanner()" onmouseout="document.ChangeBanner.src='CL1.jpg'">
+<h2><b><u>Civil Engineering</u></b></h2></a>
+  </body>
+</html>

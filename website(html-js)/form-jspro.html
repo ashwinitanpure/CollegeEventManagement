@@ -1,0 +1,152 @@
+<!doctypehtml>
+<html>
+<head>
+<title>Form page</title>
+<style>
+body{
+background: blue;
+background: linear-gradient(to top right,pink,lightblue); 
+}
+.button{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 130px;
+height: 50px;
+background-color: rgb(200,140,150);
+border: 2px solid black;
+font-size: 15px;
+}
+.button:hover {
+background-color: rgb(200,140,150);
+border : 1px solid black;
+opacity : 0.8;
+font-weight: bold;
+}
+table{
+margin-right: auto;
+margin-left : auto;
+padding: 5px;
+border : 2px solid black;
+}
+table tr td {
+padding: 5px;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+ regex = /[@][g][m][a][i][l][\.][c][o][m]$/
+ regx = /^[\D]/
+ var a = new Array();
+ with(document.forms.form1)
+ {
+  if(fname.value == "")
+  {
+   alert("Enter your full name.");
+   fname.value=""; 
+	return;
+  }
+  if(clg.value == "")
+  {
+   alert("Enter your college name.");
+   clg.value="";
+   return;
+  }
+  if(phno.value == "" || regx.test(phno.value))
+  {
+   alert("Enter valid phone number.");
+   phno.value = "";
+   return;
+} 
+  if(email.value == "" || !regex.test(email.value))
+  {
+   alert("Enter a valid email address.");
+   email.value="";
+  return;
+  }
+ }
+  mywindow=window.open('C:/webpages/pattern.html','window','width=400,height=200,left=0,top=0');
+}
+function change()
+{
+ with(document.forms.form1)
+ {
+ if(select1.value==1)
+ {
+  select2[0].text = "WebWeaver";
+  select2[0].value = 0;
+  select2[1].text = "Crazy-Coder";
+  select2[1].value = 1;
+  select2[2].text = "Traced it";
+  select2[2].value = 2;
+  select2[3].text = "X-terminate";
+  select2[3].value = 3;
+  select2[4].text = "Quick Strike";
+  select2[4].value = 4;
+ }
+ else
+ {
+  select2[0].text = "Quiz-o-mania";
+  select2[0].value = 0;
+  select2[1].text = "Spell Bee";
+  select2[1].value = 1;
+  select2[2].text = "F.R.I.E.N.D.S.-zone";
+  select2[2].value = 2;
+  select2[3].text = "Amazing race";
+  select2[3].value = 3;
+  select2[4].text = "Counter Strike";
+  select2[4].value = 4;
+ }
+ }
+}
+function highlight()
+{
+ document.GetElementById("heading").style.backgroundColor= "red";
+}
+</script>
+</head>
+<body>
+<h1 align="center" id="heading">Register Now!!</h1>
+<form name="form1">
+<table class="tab">
+<tr>
+<td>Name:</td> 
+<td><input type="text" placeholder="full name" name="fname"></td>
+</tr>
+<tr>
+<td>College: </td>
+<td><input type="text" placeholder="college" name="clg"></td>
+</tr>
+<tr>
+<td>Phone No.:</td>
+<td><input type="text" placeholder="phone no." name="phno"></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><input type="text" placeholder="email" name="email"></td>
+</tr>
+<tr>
+<td>Event Type:</td>
+<td><select name="select1" value=1 onchange="change()">
+<option value=3>                  
+<option value=1>Technical
+<option value=2>Non-Technical
+</select></td>
+</tr>
+<tr>
+<td>Event Name:</td>
+<td><select name="select2">
+<option value=0>           
+<option value=1>             
+<option value=2>           
+<option value=3>          
+<option value=4>                               
+</td>
+</tr>
+</table>
+<br><br>
+<input type="button" value="Register" name="button" class="button" onclick="validate()"/>
+</form>
+</body>
+</html>

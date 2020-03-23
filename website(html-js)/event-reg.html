@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Sponsor-form2</title>
+<style>
+body{
+background: blue;
+background: linear-gradient(to top right,pink,lightblue); 
+}
+body form table{
+font-size: 25px;
+}
+table{
+border: solid 2px black;
+
+}
+table tr{
+margin: 10px;
+padding: 20px;
+}
+table tr td{
+margin: 10px;
+ padding: 5px;
+}
+.button{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 130px;
+height: 50px;
+background-color: rgb(200,140,150);
+border: 2px solid black;
+font-size: 15px;
+}
+.button:hover {
+background-color: rgb(200,140,150);
+border : 1px solid black;
+opacity : 0.8;
+font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+ with(document.forms.form[0])
+ {
+  if (amt.value <= 5000)
+   alert("Sponsorship accepted only above 5000...");
+ }
+}
+</script>
+</head>
+<body>
+<form>
+<table align="center" >
+<tr>
+<td>Bank:</td>
+<td><select name="bank">
+<option value=1>Bank of Maharashtra
+<option value=2>Bank of Baroda
+<option value=3>ICICI
+<option value=4>SBI
+</select></td>
+</tr>
+<tr>
+<td>Account number:</td>
+<td><input type="number" name="acno"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="pass"></td>
+</tr>
+<tr>
+<td>Amount:</td>
+<td><input type="number" name="amt"/></td>
+</tr>
+<table><br><br>
+</form>
+<input type="button" value="Pay" name="button" class="button" onclick="window.open('reg-confirmation.html','mywin')"/>
+</body>
+</html>

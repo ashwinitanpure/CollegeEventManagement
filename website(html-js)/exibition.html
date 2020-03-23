@@ -1,0 +1,84 @@
+<html>
+<head>
+  <title>gpp exibition</title>
+  <script language="javascript" type="text/javascript">
+    banners= new Array( 'gpp2.jpg','gpp3.jpg','gpp4.jpg','gpp5.jpg','gpp6.jpg','gpp7.jpg','gpp8.jpg','gpp9.jpg','gpp10.jpg','gpp16.jpg','gpp15.jpg','gpp14.jpg','gpp13.jpg','gpp12.jpg','gpp11.jpg' );
+	currentBanner =0;
+bannersC= new Array( 'comp2.jpg','comp3.jpg','comp4.jpg','comp5.jpg','comp.jpg','comp7.jpg','comp8.jpg',
+'comp13.jpg','comp12.jpg','comp11.jpg''comp9.jpg','comp10.jpg' );
+	currentBannerC =0;
+ bannersE= new Array( 'elec2.jpg','elec3.jpg','elec4.jpg','elec5.jpg','elec6.jpg','elec7.jpg','elec8.jpg');
+	currentBannerE =0;
+bannersCL= new Array( 'CL2.jpg','CL3.jpg','CL4.jpg','CL5.jpg','CL6.jpg','CL7.jpg','CL8.jpg','CL9.jpg','CL10.jpg' );
+	currentBannerCL =0;
+	function showBanner()
+	{
+	  if (document.images)
+	  {
+	    currentBanner++;
+                        if(currentBanner ==banners.length )
+		{
+		  currentBanner=0;
+		}
+	  document.ChangeBanner.src= banners[currentBanner]
+                  setTimeout("showBanner()",3000);
+	  }
+               }
+ 
+	function showBannerC()
+	{
+	  if (document.images)
+	  {
+	    currentBannerC++;
+                        if(currentBannerC ==bannersC.length )
+		{
+		  currentBannerC=0;
+		}
+	  document.ChangeBannerC.src= bannersC[currentBannerC]
+                  setTimeout("showBannerC()",3000);
+	  }
+               }
+	function showBannerE()
+	{
+	  if (document.images)
+	  {
+	    currentBannerE++;
+                        if(currentBannerE ==bannersE.length )
+		{
+		  currentBannerE=0;
+		}
+	  document.ChangeBannerE.src= bannersE[currentBannerE]
+                  setTimeout("showBannerE()",3000);
+	  }
+               }
+	function showBannerCL()
+	{
+	  if (document.images)
+	  {
+	    currentBannerCL++;
+                        if(currentBannerCL ==bannersCL.length )
+		{
+		  currentBannerCL=0;
+		}
+	  document.ChangeBannerCL.src= bannersCL[currentBannerCL]
+                  setTimeout("showBannerCL()",3000);
+	  }
+               }
+  </script>
+  </head>
+  <body bgcolor="yellow">
+  <h1><marquee><b><font color="voilet">Government Polytechnic Pune Exibition.....</font color></b></marquee></h1>
+  <img src="gpp2.jpg" height="200" width="250" name="ChangeBanner" />
+   <a onmouseover="showBanner()"  onmouseout="document.ChangeBanner.src='gpp.jpg'"/>
+  <br><h2><b><u>   Science Day Exibition</u></h2></b></a>
+ <img src="comp2.jpg" height="200" width="250" name="ChangeBannerC" />
+   <a onmouseover="showBannerC()"  onmouseout="document.ChangeBannerC.src='gpp1.jpg'"/>
+  <br><h2><b><u>  Computer Engineering</u></h2></b></a>
+ <img src="elec2.jpg" height="200" width="250" name="ChangeBannerE" />
+   <a onmouseover="showBannerE()"  onmouseout="document.ChangeBannerE.src='elec1.jpg'"/>
+  <br><h2><b><u> Electrical Engineering</u></h2></b></a>
+ <img src="CL2.jpg" height="200" width="250" name="ChangeBannerCL" />
+   <a onmouseover="showBannerCL()"  onmouseout="document.ChangeBannerCL.src='CL1.jpg'"/>
+  <br><h2><b><u>  Civil Engineering</u></h2></b></a>
+  </body>
+</html>

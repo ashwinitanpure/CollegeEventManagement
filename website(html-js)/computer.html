@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>gpp exibition</title>
+  <script language="javascript" type="text/javascript">
+    banners= new Array( 'comp2.jpg','comp3.jpg','comp4.jpg','comp5.jpg','comp6.jpg','comp7.jpg','comp8.jpg','comp9.jpg','comp10.jpg','comp11.jpg','comp12.jpg' );
+	currentBanner =0;
+	function showBanner()
+	{
+	  if (document.images)
+	  {
+	    currentBanner++;
+		if( currentBanner == banners.length)
+		{
+		  currentBanner=0;
+		}
+	  document.ChangeBanner.src= banners[currentBanner];
+	  setTimeout("showBanner()",1500);
+	  }
+	}
+  </script>
+  </head>
+  <body bgcolor="yellow">
+  <img src="gpp1.jpg" height="200" width="250" name="ChangeBanner" /><br>
+ <a onmouseover="showBanner()" onmouseout="document.ChangeBanner.src='gpp1.jpg'">
+<h2><b><u>Computer Engineering</u></b></h2></a>
+  </body>
+</html>
